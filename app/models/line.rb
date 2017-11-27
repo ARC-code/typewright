@@ -74,8 +74,10 @@ class Line < ActiveRecord::Base
    def self.words_to_text(words)
       str = ""
       words.each do |word|
-         str += ' ' if str != ''
-         str += word[:word]
+         if word[:word] != nil
+            str += ' ' if str != ''
+            str += word[:word]
+         end
       end
       return str
    end
