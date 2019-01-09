@@ -39,7 +39,7 @@ gem 'whenever', :require => false
 
 # Deploy with Capistrano
 gem 'capistrano', '2.15.5' # the capistrano format has changed, so deploy.rb needs to change to remove the version number.
-gem 'rvm-capistrano'
+gem 'rvm-capistrano', require: false
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
