@@ -29,10 +29,10 @@ class LinesController < ApplicationController
          end
       else
          document_id = params[:document_id]
-         doc = Document.find_by_id(document_id)
-         src = doc.get_ocr_source( page )
          page = params[:page]
          line = params[:line]
+         doc = Document.find_by_id(document_id)
+         src = doc.get_ocr_source( page )
          if line
             lines = Line.find_all_by_document_id_and_page_and_line_and_src(document_id, page, line, src)
          else
