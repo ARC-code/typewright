@@ -20,7 +20,8 @@ class LinesController < ApplicationController
                else
                   a.page <=> b.page
                end
-               line.src = 'emop' if line.src = 'alto'
+               # BPT: the following line needed to be commented out. 'line' isn't a valid variable in this scope.
+               # line.src = 'emop' if line.src = 'alto'
             end
             start = params[:start]
             size = params[:size]
